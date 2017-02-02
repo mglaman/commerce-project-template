@@ -27,7 +27,7 @@ nginx:
       - 80:80
     links:
       - phpfpm
-    environment: { VIRTUAL_HOST: forkdin.platform, PLATFORM_DOCKER: forkdin }
+    environment: { VIRTUAL_HOST: commerce2, APP_DOCKER: commerce2 }
 #solr:
 #    image: 'makuk66/docker-solr:4.10.4'
 #    ports: ['8080']

@@ -17,14 +17,14 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project drupalcommerce/project-base some-dir --stability dev --no-interaction
+composer create-project mglaman/commerce-project-template some-dir --stability dev --no-interaction
 ```
 
 Done! Use `composer require ...` to download additional modules and themes:
 
 ```
 cd some-dir
-composer require "drupal/devel:1.x-dev"
+composer require "drupal/commerce_paypal:1.x-dev"
 ```
 
 The `composer create-project` command passes ownership of all files to the
@@ -40,6 +40,8 @@ all files not excluded by the .gitignore file.
 * Creates default writable versions of `settings.php` and `services.yml`.
 * Creates the `sites/default/files` directory.
 * Latest version of DrupalConsole is installed locally for use at `bin/drupal`.
+* Initializes baseline Behat tests for Drupal Commerce.
+* Allows you to easily install a demo of Drupal Commerce.
 
 ## Updating Drupal Core
 

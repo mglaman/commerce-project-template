@@ -29,7 +29,7 @@ test:
     - ./scripts/install-demo.sh
     - curl -I http://commerce2.dev/
   override:
-    - ./bin/phpunit --testsuite unit --exclude-group Composer,DependencyInjection,PageCache
+    - ./bin/phpunit --testsuite unit --group commerce
     - ./bin/behat -f junit -o $CIRCLE_TEST_REPORTS -f pretty -o std
 
 #deployment:
