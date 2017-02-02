@@ -1,5 +1,7 @@
 # Drupal Commerce 2 Tests First project template
 
+![CircleCI](https://circleci.com/gh/mglaman/commerce-project-template.svg?style=shield&circle-token=:circle-token)
+
 Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2 + Testing with all dependencies.
 
 Based on [drupal-composer/drupal-project](https://github.com/drupalcommerce/project-base).
