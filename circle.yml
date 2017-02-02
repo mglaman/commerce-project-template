@@ -26,7 +26,8 @@ test:
         background: true
     - mkdir web/sites/simpletest
     - ./bin/drush --root=$(pwd)/web si commerce_base --site-name="Commerce 2" --account-pass=admin --yes
-    - curl -I http://commerce2.dev
+    - ./scripts/install-demo.sh
+    - curl -I http://commerce2.dev/
   override:
     - ./bin/phpunit --testsuite unit --exclude-group Composer,DependencyInjection,PageCache
     - ./bin/behat -f junit -o $CIRCLE_TEST_REPORTS -f pretty -o std
