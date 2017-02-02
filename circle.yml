@@ -1,0 +1,38 @@
+machine:
+  php:
+    version: 7.0.7
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
+  services:
+    - docker
+  hosts:
+      commerce2.dev: 127.0.0.1
+dependencies:
+  cache_directories:
+    - ~/.composer/cache
+  pre:
+    - echo "date.timezone = 'America/Chicago'"  >  /opt/circleci/php/7.0.7/etc/conf.d/xdebug.ini
+  override:
+    - pip install docker-compose
+    - docker-compose -f docker-compose.yml.dist build
+    - docker-compose -f docker-compose.yml.dist pull
+    - docker-compose -p commerce2 -f docker-compose.yml.dist up:
+        background: true
+    - composer global require "hirak/prestissimo:^0.3"
+    - composer install
+test:
+  pre:
+    - phantomjs --webdriver=4444:
+        background: true
+    - mkdir web/sites/simpletest
+    - ./bin/drush --root=$(pwd)/web si commerce_base --site-name="Commerce 2" --account-pass=admin --yes
+    - curl -I http://commerce2.dev
+  override:
+    - ./bin/phpunit --testsuite unit --exclude-group Composer,DependencyInjection,PageCache
+    - ./bin/behat -f junit -o $CIRCLE_TEST_REPORTS -f pretty -o std
+
+#deployment:
+#  production:
+#    branch: master
+#    commands:
+#      - Do something

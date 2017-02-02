@@ -1,0 +1,26 @@
+default:
+  autoload:
+    - '%paths.base%/tests/features/bootstrap'
+  suites:
+    default:
+      failure_path: '%paths.base%/tests/failures'
+      paths:
+        features: '%paths.base%/tests/features'
+      contexts:
+        - FailureContext
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2:
+        browser: phantomjs
+      base_url: http://commerce2.dev
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: 'web'
