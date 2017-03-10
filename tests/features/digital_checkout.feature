@@ -5,6 +5,7 @@ Feature: Digital order checkout
 
 
   Scenario: I can buy an eBook
+    When anonymous checkout is enabled
     Given I am on "/product/3"
       Then I should see "Drupal 8 Development Cookbook"
     When I press "Add to cart"
