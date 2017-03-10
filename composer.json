@@ -17,6 +17,14 @@
         "commerce_base": {
             "type": "vcs",
             "url": "https://github.com/drupalcommerce/commerce_base"
+        },
+        "commerce_demo": {
+            "type": "vcs",
+            "url": "https://github.com/mglaman/commerce_demo"
+        },
+        "commerce_behat": {
+            "type": "vcs",
+            "url": "https://github.com/mglaman/drupal-commerce-behat"
         }
     },
     "config": {
@@ -33,7 +41,9 @@
         "drupal/commerce": "2.x-dev",
         "drupal/swiftmailer": "1.x-dev",
         "drupalcommerce/commerce_base": "dev-8.x-1.x",
-        "drupal/drupal-extension": "^3.2"
+        "drupal/drupal-extension": "^3.2",
+        "drupal/commerce_demo": "*@dev",
+        "drupal/commerce_behat": "dev-8.x-1.x"
     },
     "require-dev": {
         "behat/mink": "~1.7",

@@ -6,6 +6,9 @@ php:
 
 sudo: false
 
+services:
+  - docker
+
 env:
   matrix:
     - RELEASE=stable COMPOSER_CHANNEL=stable
@@ -17,20 +20,20 @@ before_install:
   - phpenv config-rm xdebug.ini
   - composer --verbose self-update --$COMPOSER_CHANNEL
   - composer --version
+  - docker-compose -f docker-compose.yml.dist build
+  - docker-compose -f docker-compose.yml.dist pull
 
 install:
+  - docker-compose -p commerce2 -f docker-compose.yml.dist up -d
   - composer --verbose install
+  - phantomjs --webdriver=4444 &
+  - mkdir web/sites/simpletest
+  - ./bin/drush --root=$(pwd)/web si commerce_base --site-name="Commerce 2" --account-pass=admin --yes
+  - ./scripts/install-demo.sh
+  - curl -I http://commerce2.dev/
 
 script:
-  - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.2.x-dev; fi;
-  - if [[ $RELEASE = dev ]]; then composer --verbose update; fi;
-  - cd $TRAVIS_BUILD_DIR/web
-  - ./../bin/drupal --version
-  - ./../bin/drupal init
-  - ./../bin/drupal site:install --db-type=sqlite --db-file=sites/default/files/.ht.sqlite --no-interaction
-  - ./../bin/drupal server 127.0.0.1:8080 &
-  - sleep 3
   - cd $TRAVIS_BUILD_DIR
-  # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
-  # Ignore PageCache group temporarily, @see https://www.drupal.org/node/2770673
-  - ./bin/phpunit --testsuite unit --exclude-group Composer,DependencyInjection,PageCache
+  - ./bin/phpunit --testsuite unit --group commerce
+  - ./bin/phpunit --testsuite kernel --group commerce
+  - ./bin/behat -f junit -f pretty -o std

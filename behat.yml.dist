@@ -13,6 +13,9 @@ default:
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\DrushContext
+        - Drupal\CommerceBehat\Context\DrupalCommerceContext
+        - Drupal\CommerceBehat\Context\DrupalCommerceCheckoutContext
+        - Drupal\CommerceBehat\Context\DrupalCommerceProductContext
   extensions:
     Behat\MinkExtension:
       goutte: ~
