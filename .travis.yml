@@ -1,6 +1,5 @@
 language: php
 php:
-  - 5.5
   - 5.6
   - 7.0
 
@@ -9,25 +8,25 @@ sudo: false
 services:
   - docker
 
-env:
-  matrix:
-    - RELEASE=stable COMPOSER_CHANNEL=stable
-    - RELEASE=dev COMPOSER_CHANNEL=stable
-    - RELEASE=stable COMPOSER_CHANNEL=snapshot
+addons:
+  hosts:
+  - commerce2.dev
 
 before_install:
   - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - phpenv config-rm xdebug.ini
-  - composer --verbose self-update --$COMPOSER_CHANNEL
   - composer --version
   - docker-compose -f docker-compose.yml.dist build
   - docker-compose -f docker-compose.yml.dist pull
+  - docker-compose -p commerce2 -f docker-compose.yml.dist up > /tmp/docker-compose.log &
+  # Remove ~/travis/.my.cnf. Drush picks this up and ignores settings.local.php dburl for some reason.
+  - rm ~travis/.my.cnf
 
 install:
-  - docker-compose -p commerce2 -f docker-compose.yml.dist up -d
-  - composer --verbose install
+  - composer install --prefer-dist --no-interaction
   - phantomjs --webdriver=4444 &
   - mkdir web/sites/simpletest
+  - docker inspect --format='{{(index (index .NetworkSettings.Ports "3306/tcp") 0).HostPort}}' commerce2_mariadb_1
   - ./bin/drush --root=$(pwd)/web si commerce_base --site-name="Commerce 2" --account-pass=admin --yes
   - ./scripts/install-demo.sh
   - curl -I http://commerce2.dev/
@@ -36,4 +35,7 @@ script:
   - cd $TRAVIS_BUILD_DIR
   - ./bin/phpunit --testsuite unit --group commerce
   - ./bin/phpunit --testsuite kernel --group commerce
-  - ./bin/behat -f junit -f pretty -o std
+  - ./bin/behat
+
+after_failure:
+  - cat /tmp/docker-compose.log

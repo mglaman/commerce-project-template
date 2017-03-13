@@ -42,7 +42,6 @@
         "drupal/swiftmailer": "1.x-dev",
         "drupalcommerce/commerce_base": "dev-8.x-1.x",
         "drupal/drupal-extension": "^3.2",
-        "drupal/commerce_demo": "*@dev",
         "drupal/commerce_behat": "dev-8.x-1.x"
     },
     "require-dev": {
