@@ -1,6 +1,6 @@
 # Drupal Commerce 2 Tests First project template
 
-![CircleCI](https://circleci.com/gh/mglaman/commerce-project-template.svg?style=shield&circle-token=:circle-token) [![Build Status](https://travis-ci.org/mglaman/commerce-project-template.svg?branch=master)](https://travis-ci.org/mglaman/commerce-project-template)
+[![CircleCI](https://circleci.com/gh/mglaman/commerce-project-template.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/mglaman/commerce-project-template) [![Build Status](https://travis-ci.org/mglaman/commerce-project-template.svg?branch=master)](https://travis-ci.org/mglaman/commerce-project-template)
 
 Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2 + Testing with all dependencies.
 

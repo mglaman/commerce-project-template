@@ -12,6 +12,7 @@ Feature: Digital order checkout
       Then I should see "Drupal 8 Development Cookbook added to your cart."
       And I click "your cart"
       And I press "Checkout"
+    Then I press "Continue as Guest"
     Then I fill in the following:
     | payment_information[add_payment_method][payment_details][security_code]                        | 123    |
     | payment_information[add_payment_method][billing_information][address][0][address][given_name]  | John   |
