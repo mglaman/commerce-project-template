@@ -19,6 +19,8 @@ dependencies:
     - docker-compose -p commerce2 -f docker-compose.yml.dist up:
         background: true
     - composer global require "hirak/prestissimo:^0.3"
+    - git config --global github.accesstoken $GITHUB_OAUTH_TOKEN
+    - composer config -g github-oauth.github.com $GITHUB_OAUTH_TOKEN
     - composer install --prefer-dist --no-interaction
 test:
   pre:

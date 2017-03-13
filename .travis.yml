@@ -23,6 +23,8 @@ before_install:
   - rm ~travis/.my.cnf
 
 install:
+  - git config --global github.accesstoken $GITHUB_OAUTH_TOKEN
+  - composer config -g github-oauth.github.com $GITHUB_OAUTH_TOKEN
   - composer install --prefer-dist --no-interaction
   - phantomjs --webdriver=4444 &
   - mkdir web/sites/simpletest
