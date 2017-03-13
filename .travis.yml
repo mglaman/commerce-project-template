@@ -24,6 +24,7 @@ install:
   - composer install --prefer-dist --no-interaction
   - phantomjs --webdriver=4444 &
   - mkdir web/sites/simpletest
+  - docker inspect --format='{{(index (index .NetworkSettings.Ports "3306/tcp") 0).HostPort}}' commerce2_mariadb_1
   - ./bin/drush --root=$(pwd)/web si commerce_base --site-name="Commerce 2" --account-pass=admin --yes
   - ./scripts/install-demo.sh
   - curl -I http://commerce2.dev/
