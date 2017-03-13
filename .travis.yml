@@ -8,22 +8,19 @@ sudo: false
 services:
   - docker
 
-env:
-  matrix:
-    - RELEASE=stable COMPOSER_CHANNEL=stable
-    - RELEASE=dev COMPOSER_CHANNEL=stable
-    - RELEASE=stable COMPOSER_CHANNEL=snapshot
+addons:
+  hosts:
+  - commerce2.dev
 
 before_install:
   - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - phpenv config-rm xdebug.ini
-  - composer --verbose self-update --$COMPOSER_CHANNEL
   - composer --version
   - docker-compose -f docker-compose.yml.dist build
   - docker-compose -f docker-compose.yml.dist pull
+  - docker-compose -p commerce2 -f docker-compose.yml.dist up > /tmp/docker-compose.log &
 
 install:
-  - docker-compose -p commerce2 -f docker-compose.yml.dist up -d
   - composer --verbose install
   - phantomjs --webdriver=4444 &
   - mkdir web/sites/simpletest
@@ -36,3 +33,6 @@ script:
   - ./bin/phpunit --testsuite unit --group commerce
   - ./bin/phpunit --testsuite kernel --group commerce
   - ./bin/behat -f junit -f pretty -o std
+
+after_failure:
+  - cat /tmp/docker-compose.log
