@@ -19,6 +19,8 @@ before_install:
   - docker-compose -f docker-compose.yml.dist build
   - docker-compose -f docker-compose.yml.dist pull
   - docker-compose -p commerce2 -f docker-compose.yml.dist up > /tmp/docker-compose.log &
+  # Remove ~/travis/.my.cnf. Drush picks this up and ignores settings.local.php dburl for some reason.
+  - rm ~travis/.my.cnf
 
 install:
   - composer install --prefer-dist --no-interaction
