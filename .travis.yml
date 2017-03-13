@@ -35,7 +35,7 @@ script:
   - cd $TRAVIS_BUILD_DIR
   - ./bin/phpunit --testsuite unit --group commerce
   - ./bin/phpunit --testsuite kernel --group commerce
-  - ./bin/behat -f junit -f pretty -o std
+  - ./bin/behat
 
 after_failure:
   - cat /tmp/docker-compose.log
