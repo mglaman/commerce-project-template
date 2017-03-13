@@ -32,6 +32,9 @@ test:
     - ./bin/phpunit --testsuite unit --group commerce
     - ./bin/phpunit --testsuite kernel --group commerce
     - ./bin/behat -f junit -o $CIRCLE_TEST_REPORTS -f pretty -o std
+general:
+  artifacts:
+    - "tests/failures"
 
 #deployment:
 #  production:
