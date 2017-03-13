@@ -19,7 +19,7 @@ dependencies:
     - docker-compose -p commerce2 -f docker-compose.yml.dist up:
         background: true
     - composer global require "hirak/prestissimo:^0.3"
-    - composer install
+    - composer install --prefer-dist --no-interaction
 test:
   pre:
     - phantomjs --webdriver=4444:
