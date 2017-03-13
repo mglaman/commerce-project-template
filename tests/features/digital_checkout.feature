@@ -14,12 +14,14 @@ Feature: Digital order checkout
       And I press "Checkout"
     Then I press "Continue as Guest"
     Then I fill in the following:
-    | payment_information[add_payment_method][payment_details][security_code]                        | 123    |
-    | payment_information[add_payment_method][billing_information][address][0][address][given_name]  | John   |
-    | payment_information[add_payment_method][billing_information][address][0][address][family_name] | Doe    |
-    | payment_information[add_payment_method][billing_information][address][0][address][address_line1]                               | 222222 |
-    | payment_information[add_payment_method][billing_information][address][0][address][postal_code]                                 | 94043  |
-    | payment_information[add_payment_method][billing_information][address][0][address][locality] | Mountain View |
+    | payment_information[add_payment_method][payment_details][security_code]                          | 123          |
+    | contact_information[email]                                                                       | test@example |
+    | contact_information[email_confirm]                                                               | test@example |
+    | payment_information[add_payment_method][billing_information][address][0][address][given_name]    | John         |
+    | payment_information[add_payment_method][billing_information][address][0][address][family_name]   | Doe          |
+    | payment_information[add_payment_method][billing_information][address][0][address][address_line1] | 222222       |
+    | payment_information[add_payment_method][billing_information][address][0][address][postal_code]   | 94043  |
+    | payment_information[add_payment_method][billing_information][address][0][address][locality]      | Mountain View |
     | payment_information[add_payment_method][billing_information][address][0][address][administrative_area] | CA |
     And I press "Continue to review"
     And I press "Pay and complete purchase"
