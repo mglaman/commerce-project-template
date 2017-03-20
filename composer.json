@@ -1,11 +1,11 @@
 {
-    "name": "drupalcommerce/project-base",
-    "description": "Commerce 2.x project template",
+    "name": "mglaman/commerce-project-template",
+    "description": "Commerce 2.x project template with Behat testing",
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
         {
-            "name": "",
+            "name": "Matt Glaman",
             "role": ""
         }
     ],
