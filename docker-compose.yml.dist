@@ -9,7 +9,7 @@ phpfpm:
       - mariadb
       #- solr
       - mailhog
-    environment: { APP_DOCKER: commerce2, PHP_IDE_CONFIG: serverName=commerce2.dev }
+    environment: { APP_DOCKER: commerce2, PHP_IDE_CONFIG: serverName=commerce2 }
 mariadb:
     command: 'mysqld --verbose'
     image: mariadb
@@ -27,7 +27,7 @@ nginx:
       - 80:80
     links:
       - phpfpm
-    environment: { VIRTUAL_HOST: commerce2, APP_DOCKER: commerce2 }
+    environment: { APP_DOCKER: commerce2 }
 #solr:
 #    image: 'makuk66/docker-solr:4.10.4'
 #    ports: ['8080']

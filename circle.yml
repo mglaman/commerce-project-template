@@ -5,8 +5,6 @@ machine:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
   services:
     - docker
-  hosts:
-      commerce2.dev: 127.0.0.1
 dependencies:
   cache_directories:
     - ~/.composer/cache
@@ -27,7 +25,7 @@ test:
     - mkdir web/sites/simpletest
     - ./bin/drush --root=$(pwd)/web si commerce_base --site-name="Commerce 2" --account-pass=admin --yes
     - ./scripts/install-demo.sh
-    - curl -I http://commerce2.dev/
+    - curl -I http://localhost/
   override:
     - ./bin/phpunit --testsuite unit --group commerce
     - ./bin/phpunit --testsuite kernel --group commerce

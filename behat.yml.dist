@@ -21,7 +21,7 @@ default:
       goutte: ~
       selenium2:
         browser: phantomjs
-      base_url: http://commerce2.dev
+      base_url: http://localhost
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'

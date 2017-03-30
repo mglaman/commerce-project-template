@@ -1,7 +1,5 @@
 <?php
-$settings['trusted_host_patterns'] = array(
-  '^commerce2\.dev',
-);
+$settings['trusted_host_patterns'] = [];
 
 // Database configuration.
 $databases['default']['default'] = array(
@@ -26,7 +24,7 @@ if (empty($_SERVER['APP_DOCKER'])) {
   // Default config within Docker container.
   $databases['default']['default'] = array(
     'driver' => 'mysql',
-    'host' => 'commerce2.dev',
+    'host' => 'localhost',
     'port' => $port,
     'username' => 'mysql',
     'password' => 'mysql',
@@ -40,3 +38,5 @@ if (empty($_SERVER['APP_DOCKER'])) {
   // $config['search_api.server.solr']['backend_config']['connector_config']['host'] = 'localhost';
   // $config['search_api.server.solr']['backend_config']['connector_config']['port'] = $port;
 }
+
+$settings['update_free_access'] = TRUE;
