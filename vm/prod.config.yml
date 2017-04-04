@@ -1,0 +1,13 @@
+drupal_deploy: true
+# Defaulted to `https` over `git` for default template.
+drupal_deploy_repo: "https://github.com/mglaman/commerce-project-template.git"
+drupal_deploy_dir: "/var/www/drupal"
+
+drupal_domain: "prod.example.com"
+vagrant_hostname: "{{ drupal_domain }}"
+
+apache_vhosts:
+  - servername: "{{ drupal_domain }}"
+    documentroot: "{{ drupal_core_path }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+

@@ -1,0 +1,35 @@
+vagrant_hostname: local.example.com
+vagrant_machine_name: local-example
+vagrant_ip: 192.168.88.22
+
+vagrant_synced_folders:
+  - local_path: .
+    destination: /var/www/drupal
+    type: nfs
+
+drupal_account_pass: admin
+drupal_db_password: drupal
+mysql_root_password: root
+
+php_sendmail_path: "/opt/mailhog/mhsendmail"
+installed_extras:
+  - drush
+  - mailhog
+  - varnish
+
+dashboard_install_dir: /var/www/dashboard
+extra_security_enabled: false
+
+firewall_allowed_tcp_ports:
+  - "22"
+  - "25"
+  - "80"
+  - "81"
+  - "443"
+  - "8025"
+firewall_log_dropped_packets: false
+
+apache_listen_port: "80"
+varnish_listen_port: "81"
+varnish_default_backend_port: "80"
+

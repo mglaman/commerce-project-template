@@ -1,0 +1,36 @@
+---
+# Composer project settings.
+drupal_build_composer_project: false
+drupal_build_composer: false
+drupal_composer_dependencies: []
+
+drupal_site_name: "Drupal Commerce Demo"
+drupal_core_path: "/var/www/drupal/web"
+drupal_install-site: true
+
+drupalvm_cron_jobs:
+  - name: "Drupal cron"
+    minute: "*/15"
+    job: "{{ drush_path }} -r {{ drupal_core_path }} core-cron"
+
+php_version: "7.1"
+php_sendmail_path: "/usr/sbin/sendmail -t -i"
+installed_extras:
+  - drush
+  - varnish
+
+# Other secure defaults.
+dashboard_install_dir: ''
+apache_packages_state: installed
+
+# Restrict the firewall to only ports that are required for external services.
+firewall_allowed_tcp_ports:
+  - "22"
+  - "80"
+  - "443"
+firewall_log_dropped_packets: true
+
+# Set Apache to listen on port 81 (internal only), and Varnish on 80.
+apache_listen_port: "81"
+varnish_listen_port: "80"
+varnish_default_backend_port: "81"
