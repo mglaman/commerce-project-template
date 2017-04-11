@@ -40,9 +40,7 @@
         "drush/drush": "~8.0",
         "drupal/commerce": "2.x-dev",
         "drupal/swiftmailer": "1.x-dev",
-        "drupalcommerce/commerce_base": "dev-8.x-1.x",
-        "drupal/drupal-extension": "^3.2",
-        "drupal/commerce_behat": "dev-8.x-1.x"
+        "drupalcommerce/commerce_base": "dev-8.x-1.x"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -51,7 +49,9 @@
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "~2.8"
+        "symfony/css-selector": "~2.8",
+        "drupal/drupal-extension": "^3.2",
+        "drupal/commerce_behat": "dev-8.x-1.x"
     },
     "conflict": {
         "drupal/drupal": "*"
