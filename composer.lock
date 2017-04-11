@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef29d9d1ae5f1cf2101e6915a5c9ed38",
+    "content-hash": "02f8a9d3a0ef55dee18bb51fcc24ae43",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1498,16 +1498,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.5.3",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "10f1f19651343f87573129ca970aef1a47a6f29e"
+                "reference": "930297026c8009a567ac051fd545bf6124150347"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/10f1f19651343f87573129ca970aef1a47a6f29e",
-                "reference": "10f1f19651343f87573129ca970aef1a47a6f29e",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/930297026c8009a567ac051fd545bf6124150347",
+                "reference": "930297026c8009a567ac051fd545bf6124150347",
                 "shasum": ""
             },
             "require": {
@@ -1516,20 +1516,20 @@
                 "doctrine/collections": "1.*",
                 "doctrine/inflector": "1.*",
                 "doctrine/lexer": "1.*",
-                "php": ">=5.3.2"
+                "php": "~5.6|~7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7"
+                "phpunit/phpunit": "^5.4.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5.x-dev"
+                    "dev-master": "2.7.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1567,7 +1567,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-12-25T13:10:16+00:00"
+            "time": "2017-01-13T14:02:13+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1742,7 +1742,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/address-8.x-1.0-rc4.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc4",
                 "shasum": "541b020ce839dd9c75374e213c1131d9c1f6f52d"
             },
             "require": {
@@ -1791,12 +1791,12 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/commerce",
-                "reference": "8f1e82977037238b31b970425932c5e459fad0e1"
+                "reference": "8f456268e67245a4825223618975ad1f90782283"
             },
             "require": {
                 "commerceguys/intl": "~0.7",
                 "drupal/address": "~1.0",
-                "drupal/core": "~8.2",
+                "drupal/core": "~8.3",
                 "drupal/entity": "~1.0",
                 "drupal/entity_reference_revisions": "~1.0",
                 "drupal/inline_entity_form": "~1.0",
@@ -1822,8 +1822,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-beta5+69-dev",
-                    "datestamp": "1489182782"
+                    "version": "8.x-2.0-beta6+24-dev",
+                    "datestamp": "1491567483"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1853,7 +1853,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/commerce"
             },
-            "time": "2017-03-12 22:23:23"
+            "time": "2017-04-08 17:09:10"
         },
         {
             "name": "drupal/commerce_behat",
@@ -1900,301 +1900,6 @@
                 "source": "https://github.com/mglaman/drupal-commerce-behat/tree/8.x-1.x"
             },
             "time": "2017-03-10 04:13:49"
-        },
-        {
-            "name": "drupal/commerce_demo",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mglaman/commerce_demo.git",
-                "reference": "0ef93c49ef1f24fd9f3e1cf253e11af20c1eb48f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mglaman/commerce_demo/zipball/0ef93c49ef1f24fd9f3e1cf253e11af20c1eb48f",
-                "reference": "0ef93c49ef1f24fd9f3e1cf253e11af20c1eb48f",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/commerce": "2.x-dev",
-                "drupal/commerce_migrate": "2.x-dev",
-                "drupal/commerce_shipping": "2.x-dev",
-                "drupal/migrate_plus": "~3",
-                "drupal/migrate_source_csv": "~2",
-                "drupal/migrate_tools": "~3"
-            },
-            "type": "drupal-module",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Commerce demo stuff",
-            "homepage": "https://www.drupal.org/project/commerce_demo",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "issues": "http://drupal.org/project/issues/commerce_demo",
-                "source": "http://cgit.drupalcode.org/commerce_demo"
-            },
-            "time": "2017-03-13 18:04:33"
-        },
-        {
-            "name": "drupal/commerce_migrate",
-            "version": "dev-2.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/commerce_migrate",
-                "reference": "fc38b0fe05cb0e6c8bb088a0d67271105133eb2c"
-            },
-            "require": {
-                "drupal/commerce": "~2.0",
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0-alpha1+0-dev",
-                    "datestamp": "1475809439"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Haza",
-                    "homepage": "https://www.drupal.org/user/182721"
-                },
-                {
-                    "name": "andyg5000",
-                    "homepage": "https://www.drupal.org/user/808668"
-                },
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "dwkitchen",
-                    "homepage": "https://www.drupal.org/user/367701"
-                },
-                {
-                    "name": "joachim",
-                    "homepage": "https://www.drupal.org/user/107701"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rfay",
-                    "homepage": "https://www.drupal.org/user/30906"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Commerce Migrate extends Migrate to support bringing store information into Drupal Commerce.",
-            "homepage": "http://drupal.org/project/commerce_migrate",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce_migrate"
-            },
-            "time": "2016-10-07 02:51:03"
-        },
-        {
-            "name": "drupal/commerce_order",
-            "version": "dev-2.x",
-            "require": {
-                "drupal/commerce": "self.version",
-                "drupal/commerce_price": "*",
-                "drupal/commerce_store": "*",
-                "drupal/core": "*",
-                "drupal/entity_reference_revisions": "*",
-                "drupal/profile": "*",
-                "drupal/state_machine": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0-beta5+57-dev",
-                    "datestamp": "1488453185"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Damien Tournoud",
-                    "homepage": "https://www.drupal.org/user/22211"
-                },
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Defines the Order entity and associated features.",
-            "homepage": "https://www.drupal.org/project/commerce",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce"
-            }
-        },
-        {
-            "name": "drupal/commerce_price",
-            "version": "dev-2.x",
-            "require": {
-                "drupal/commerce": "self.version",
-                "drupal/core": "~8.0"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0-beta5+57-dev",
-                    "datestamp": "1488453185"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Damien Tournoud",
-                    "homepage": "https://www.drupal.org/user/22211"
-                },
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Defines the Currency entity.",
-            "homepage": "https://www.drupal.org/project/commerce",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce"
-            }
-        },
-        {
-            "name": "drupal/commerce_shipping",
-            "version": "dev-2.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/commerce_shipping",
-                "reference": "18cfd587b2d8266b569eacba85268351856c9a38"
-            },
-            "require": {
-                "drupal/commerce": "*",
-                "drupal/commerce_order": "*",
-                "drupal/commerce_price": "*",
-                "drupal/core": "~8.0",
-                "drupal/physical": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0-beta1+6-dev",
-                    "datestamp": "1488798784"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "googletorp",
-                    "homepage": "https://www.drupal.org/user/386230"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Provides core shipping functionality.",
-            "homepage": "https://www.drupal.org/project/commerce_shipping",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce_shipping"
-            },
-            "time": "2017-03-07 15:17:01"
-        },
-        {
-            "name": "drupal/commerce_store",
-            "version": "dev-2.x",
-            "require": {
-                "drupal/commerce": "self.version",
-                "drupal/commerce_price": "*",
-                "drupal/core": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0-beta5+57-dev",
-                    "datestamp": "1488453185"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Damien Tournoud",
-                    "homepage": "https://www.drupal.org/user/22211"
-                },
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Defines the Store entity and associated features.",
-            "homepage": "https://www.drupal.org/project/commerce",
-            "support": {
-                "source": "http://cgit.drupalcode.org/commerce"
-            }
         },
         {
             "name": "drupal/console",
@@ -2452,28 +2157,28 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.2.6",
+            "version": "8.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "6cd5d296125a4584d470d75d8e5218ff17c39c22"
+                "reference": "e503a252ec5c2811abed6af0c7b70afda8e93a3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/6cd5d296125a4584d470d75d8e5218ff17c39c22",
-                "reference": "6cd5d296125a4584d470d75d8e5218ff17c39c22",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/e503a252ec5c2811abed6af0c7b70afda8e93a3f",
+                "reference": "e503a252ec5c2811abed6af0c7b70afda8e93a3f",
                 "shasum": ""
             },
             "require": {
                 "asm89/stack-cors": "~1.0",
                 "composer/semver": "~1.0",
                 "doctrine/annotations": "1.2.*",
-                "doctrine/common": "2.5.*",
+                "doctrine/common": "^2.5",
                 "easyrdf/easyrdf": "0.9.*",
                 "egulias/email-validator": "1.2.*",
                 "guzzlehttp/guzzle": "^6.2.1",
                 "masterminds/html5": "~2.1",
-                "paragonie/random_compat": "^1|^2",
+                "paragonie/random_compat": "^1.0|^2.0",
                 "php": ">=5.5.9",
                 "stack/builder": "1.0.*",
                 "symfony-cmf/routing": "~1.4",
@@ -2485,7 +2190,7 @@
                 "symfony/http-kernel": "~2.8",
                 "symfony/polyfill-iconv": "~1.0",
                 "symfony/process": "~2.8",
-                "symfony/psr-http-message-bridge": "v0.2",
+                "symfony/psr-http-message-bridge": "^1.0",
                 "symfony/routing": "~2.8",
                 "symfony/serializer": "~2.8",
                 "symfony/translation": "~2.8",
@@ -2546,6 +2251,7 @@
                 "drupal/editor": "self.version",
                 "drupal/entity_reference": "self.version",
                 "drupal/field": "self.version",
+                "drupal/field_layout": "self.version",
                 "drupal/field_ui": "self.version",
                 "drupal/file": "self.version",
                 "drupal/filter": "self.version",
@@ -2556,6 +2262,7 @@
                 "drupal/image": "self.version",
                 "drupal/inline_form_errors": "self.version",
                 "drupal/language": "self.version",
+                "drupal/layout_discovery": "self.version",
                 "drupal/link": "self.version",
                 "drupal/locale": "self.version",
                 "drupal/menu_link_content": "self.version",
@@ -2592,15 +2299,18 @@
                 "drupal/update": "self.version",
                 "drupal/user": "self.version",
                 "drupal/views": "self.version",
-                "drupal/views_ui": "self.version"
+                "drupal/views_ui": "self.version",
+                "drupal/workflows": "self.version"
             },
             "require-dev": {
-                "behat/mink": "~1.7",
+                "behat/mink": "1.7.x-dev",
                 "behat/mink-goutte-driver": "~1.2",
+                "drupal/coder": "8.2.12",
                 "jcalderonzumba/gastonjs": "~1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
                 "mikey179/vfsstream": "~1.2",
-                "phpunit/phpunit": "~4.8",
+                "phpunit/phpunit": ">=4.8.28 <5",
+                "symfony/browser-kit": ">=2.8.13 <3.0",
                 "symfony/css-selector": "~2.8"
             },
             "type": "drupal-core",
@@ -2625,7 +2335,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2017-02-01T17:03:36+00:00"
+            "time": "2017-04-06T00:12:44+00:00"
         },
         {
             "name": "drupal/drupal-driver",
@@ -2756,7 +2466,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.0-alpha4.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha4",
                 "shasum": "c081d3757c159dfee74c9e5acb63bdee81c42e18"
             },
             "require": {
@@ -2980,222 +2690,12 @@
             }
         },
         {
-            "name": "drupal/migrate_plus",
-            "version": "3.0.0-beta1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/migrate_plus",
-                "reference": "8.x-3.0-beta1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-3.0-beta1.zip",
-                "reference": "8.x-3.0-beta1",
-                "shasum": "7bae5c758a432053863b7b19c94fc1b829debf00"
-            },
-            "require": {
-                "drupal/core": "^8.2"
-            },
-            "require-dev": {
-                "drupal/migrate_example_advanced_setup": "*",
-                "drupal/migrate_example_setup": "*"
-            },
-            "suggest": {
-                "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-beta1",
-                    "datestamp": "1476307739"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Mike Ryan",
-                    "homepage": "https://www.drupal.org/u/mikeryan",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Enhancements to core migration support.",
-            "homepage": "https://www.drupal.org/project/migrate_plus",
-            "support": {
-                "source": "https://cgit.drupalcode.org/migrate_plus",
-                "issues": "https://www.drupal.org/project/issues/migrate_plus",
-                "irc": "irc://irc.freenode.org/drupal-migrate"
-            }
-        },
-        {
-            "name": "drupal/migrate_source_csv",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/migrate_source_csv",
-                "reference": "8.x-2.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_source_csv-8.x-2.0.zip",
-                "reference": "8.x-2.0",
-                "shasum": "056845ce1679a051733b12576e3204609dce293d"
-            },
-            "require": {
-                "drupal/core": "~8.1"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "~1",
-                "phpunit/phpunit": "~4"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0",
-                    "datestamp": "1479750843"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Lucas Hedding",
-                    "homepage": "https://www.drupal.org/u/heddn",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "mikeryan",
-                    "homepage": "https://www.drupal.org/user/4420"
-                }
-            ],
-            "description": "CSV source migration.",
-            "homepage": "https://www.drupal.org/project/migrate_source_csv",
-            "support": {
-                "source": "https://cgit.drupalcode.org/migrate_source_csv",
-                "issues": "https://www.drupal.org/project/issues/migrate_source_csv",
-                "irc": "irc://irc.freenode.org/drupal-migrate"
-            }
-        },
-        {
-            "name": "drupal/migrate_tools",
-            "version": "3.0.0-beta1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/migrate_tools",
-                "reference": "8.x-3.0-beta1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-3.0-beta1.zip",
-                "reference": "8.x-3.0-beta1",
-                "shasum": "1511d1da1444743fa2defa54a17e62264e8ab836"
-            },
-            "require": {
-                "drupal/core": "^8.2",
-                "drupal/migrate_plus": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-beta1",
-                    "datestamp": "1476313439"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "mikeryan",
-                    "homepage": "https://www.drupal.org/user/4420"
-                }
-            ],
-            "description": "Tools to assist in developing and running migrations.",
-            "homepage": "https://www.drupal.org/project/migrate_tools",
-            "support": {
-                "source": "http://cgit.drupalcode.org/migrate_tools"
-            }
-        },
-        {
-            "name": "drupal/physical",
-            "version": "1.0.0-rc2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/physical",
-                "reference": "8.x-1.0-rc2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/physical-8.x-1.0-rc2.zip",
-                "reference": "8.x-1.0-rc2",
-                "shasum": "591a939febfa578c49c1adf937a1e51c819555b2"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-rc2",
-                    "datestamp": "1483664643"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "bojanz",
-                    "homepage": "https://www.drupal.org/user/86106"
-                },
-                {
-                    "name": "czigor",
-                    "homepage": "https://www.drupal.org/user/826222"
-                },
-                {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "rszrama",
-                    "homepage": "https://www.drupal.org/user/49344"
-                }
-            ],
-            "description": "Physical supplies such fields as physical weight and dimensions.",
-            "homepage": "http://drupal.org/project/physical",
-            "support": {
-                "source": "http://cgit.drupalcode.org/physical"
-            }
-        },
-        {
             "name": "drupal/profile",
             "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/profile",
-                "reference": "c4d1ad2fddfb801d714bcecca784d8cc0ddb8083"
+                "reference": "daa02430d03873615698421d67172c0980a63dc2"
             },
             "require": {
                 "drupal/core": "~8.1",
@@ -3207,8 +2707,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha5+13-dev",
-                    "datestamp": "1484833683"
+                    "version": "8.x-1.0-alpha5+16-dev",
+                    "datestamp": "1491147482"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3242,7 +2742,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/profile"
             },
-            "time": "2017-01-19 16:50:30"
+            "time": "2017-04-02 17:41:23"
         },
         {
             "name": "drupal/state_machine",
@@ -3834,16 +3334,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855"
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/0d6c7ca039329247e4f0f8f8f6506810e8248855",
-                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
                 "shasum": ""
             },
             "require": {
@@ -3895,7 +3395,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-27T10:51:17+00:00"
+            "time": "2017-03-20T17:10:46+00:00"
         },
         {
             "name": "html2text/html2text",
@@ -4825,7 +4325,7 @@
         },
         {
             "name": "symfony/class-loader",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/class-loader.git",
@@ -4934,16 +4434,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "81508e6fac4476771275a3f4f53c3fee9b956bfa"
+                "reference": "86407ff20855a5eaa2a7219bd815e9c40a88633e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/81508e6fac4476771275a3f4f53c3fee9b956bfa",
-                "reference": "81508e6fac4476771275a3f4f53c3fee9b956bfa",
+                "url": "https://api.github.com/repos/symfony/console/zipball/86407ff20855a5eaa2a7219bd815e9c40a88633e",
+                "reference": "86407ff20855a5eaa2a7219bd815e9c40a88633e",
                 "shasum": ""
             },
             "require": {
@@ -4991,7 +4491,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-04T11:00:12+00:00"
+            "time": "2017-04-03T20:37:06+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -5048,7 +4548,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -5105,16 +4605,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "efdbeefa454a41154fd99a6f0489f0e9cb46c497"
+                "reference": "14b9d8ae69ac4c74e8f05fee7e0a57039b99c81e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/efdbeefa454a41154fd99a6f0489f0e9cb46c497",
-                "reference": "efdbeefa454a41154fd99a6f0489f0e9cb46c497",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/14b9d8ae69ac4c74e8f05fee7e0a57039b99c81e",
+                "reference": "14b9d8ae69ac4c74e8f05fee7e0a57039b99c81e",
                 "shasum": ""
             },
             "require": {
@@ -5164,7 +4664,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-28T12:31:05+00:00"
+            "time": "2017-04-03T22:14:48+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -5224,16 +4724,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "bb4ec47e8e109c1c1172145732d0aa468d967cd0"
+                "reference": "88b65f0ac25355090e524aba4ceb066025df8bd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/bb4ec47e8e109c1c1172145732d0aa468d967cd0",
-                "reference": "bb4ec47e8e109c1c1172145732d0aa468d967cd0",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/88b65f0ac25355090e524aba4ceb066025df8bd2",
+                "reference": "88b65f0ac25355090e524aba4ceb066025df8bd2",
                 "shasum": ""
             },
             "require": {
@@ -5280,7 +4780,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-21T08:33:48+00:00"
+            "time": "2017-04-03T20:37:06+00:00"
         },
         {
             "name": "symfony/expression-language",
@@ -5431,16 +4931,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "88af747e7af17d8d7d439ad4639dc3e23ddd3edd"
+                "reference": "0717efd2f2264dbd3d8e1bc69a0418c2fd6295d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/88af747e7af17d8d7d439ad4639dc3e23ddd3edd",
-                "reference": "88af747e7af17d8d7d439ad4639dc3e23ddd3edd",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/0717efd2f2264dbd3d8e1bc69a0418c2fd6295d2",
+                "reference": "0717efd2f2264dbd3d8e1bc69a0418c2fd6295d2",
                 "shasum": ""
             },
             "require": {
@@ -5482,20 +4982,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-04T12:20:59+00:00"
+            "time": "2017-04-04T15:24:26+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "18d7a01ac14ffa5a652a635c402b9777f858fc1a"
+                "reference": "3256e9e554f02ba2dd49cff253f15df69c36cf40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/18d7a01ac14ffa5a652a635c402b9777f858fc1a",
-                "reference": "18d7a01ac14ffa5a652a635c402b9777f858fc1a",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/3256e9e554f02ba2dd49cff253f15df69c36cf40",
+                "reference": "3256e9e554f02ba2dd49cff253f15df69c36cf40",
                 "shasum": ""
             },
             "require": {
@@ -5564,7 +5064,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-06T03:54:35+00:00"
+            "time": "2017-04-05T04:04:34+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -5853,7 +5353,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -5902,16 +5402,16 @@
         },
         {
             "name": "symfony/psr-http-message-bridge",
-            "version": "v0.2",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "dc7e308e1dc2898a46776e2221a643cb08315453"
+                "reference": "66085f246d3893cbdbcec5f5ad15ac60546cf0de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/dc7e308e1dc2898a46776e2221a643cb08315453",
-                "reference": "dc7e308e1dc2898a46776e2221a643cb08315453",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/66085f246d3893cbdbcec5f5ad15ac60546cf0de",
+                "reference": "66085f246d3893cbdbcec5f5ad15ac60546cf0de",
                 "shasum": ""
             },
             "require": {
@@ -5923,9 +5423,15 @@
                 "symfony/phpunit-bridge": "~2.7|~3.0"
             },
             "suggest": {
+                "psr/http-message-implementation": "To use the HttpFoundation factory",
                 "zendframework/zend-diactoros": "To use the Zend Diactoros factory"
             },
             "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Bridge\\PsrHttpMessage\\": ""
@@ -5952,11 +5458,11 @@
                 "http-message",
                 "psr-7"
             ],
-            "time": "2015-05-29T17:57:12+00:00"
+            "time": "2016-09-14T18:37:20+00:00"
         },
         {
             "name": "symfony/routing",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
@@ -6031,16 +5537,16 @@
         },
         {
             "name": "symfony/serializer",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "df3d919f00177f599c8970e86112c7582b08a582"
+                "reference": "d1c3d68daee29bbf0b4600745899a7000c215642"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/df3d919f00177f599c8970e86112c7582b08a582",
-                "reference": "df3d919f00177f599c8970e86112c7582b08a582",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/d1c3d68daee29bbf0b4600745899a7000c215642",
+                "reference": "d1c3d68daee29bbf0b4600745899a7000c215642",
                 "shasum": ""
             },
             "require": {
@@ -6091,20 +5597,20 @@
             ],
             "description": "Symfony Serializer Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-05T17:40:13+00:00"
+            "time": "2017-03-21T22:47:17+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "b538355bc99db2ec7cc35284ec76d92ae7d1d256"
+                "reference": "047e97a64d609778cadfc76e3a09793696bb19f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/b538355bc99db2ec7cc35284ec76d92ae7d1d256",
-                "reference": "b538355bc99db2ec7cc35284ec76d92ae7d1d256",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/047e97a64d609778cadfc76e3a09793696bb19f1",
+                "reference": "047e97a64d609778cadfc76e3a09793696bb19f1",
                 "shasum": ""
             },
             "require": {
@@ -6155,20 +5661,20 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-04T12:20:59+00:00"
+            "time": "2017-03-21T21:39:01+00:00"
         },
         {
             "name": "symfony/validator",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/validator.git",
-                "reference": "8d4bfa7ec24e70ebc28d0cea5f2702d3f1257a63"
+                "reference": "43f617ee200af4f4dedbb0782c6c689e06994286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/validator/zipball/8d4bfa7ec24e70ebc28d0cea5f2702d3f1257a63",
-                "reference": "8d4bfa7ec24e70ebc28d0cea5f2702d3f1257a63",
+                "url": "https://api.github.com/repos/symfony/validator/zipball/43f617ee200af4f4dedbb0782c6c689e06994286",
+                "reference": "43f617ee200af4f4dedbb0782c6c689e06994286",
                 "shasum": ""
             },
             "require": {
@@ -6228,7 +5734,7 @@
             ],
             "description": "Symfony Validator Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-28T02:24:56+00:00"
+            "time": "2017-03-23T16:08:03+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -6298,16 +5804,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "2a7bab3c16f6f452c47818fdd08f3b1e49ffcf7d"
+                "reference": "286d84891690b0e2515874717e49360d1c98a703"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/2a7bab3c16f6f452c47818fdd08f3b1e49ffcf7d",
-                "reference": "2a7bab3c16f6f452c47818fdd08f3b1e49ffcf7d",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/286d84891690b0e2515874717e49360d1c98a703",
+                "reference": "286d84891690b0e2515874717e49360d1c98a703",
                 "shasum": ""
             },
             "require": {
@@ -6343,20 +5849,20 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-01T18:13:50+00:00"
+            "time": "2017-03-20T09:41:44+00:00"
         },
         {
             "name": "twig/twig",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9935b662e24d6e634da88901ab534cc12e8c728f"
+                "reference": "05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9935b662e24d6e634da88901ab534cc12e8c728f",
-                "reference": "9935b662e24d6e634da88901ab534cc12e8c728f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a",
+                "reference": "05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a",
                 "shasum": ""
             },
             "require": {
@@ -6365,12 +5871,12 @@
             "require-dev": {
                 "psr/container": "^1.0",
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2"
+                "symfony/phpunit-bridge": "~3.3@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.32-dev"
+                    "dev-master": "1.33-dev"
                 }
             },
             "autoload": {
@@ -6405,7 +5911,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-02-27T00:07:03+00:00"
+            "time": "2017-03-22T15:40:09+00:00"
         },
         {
             "name": "webflo/drupal-finder",
@@ -6542,16 +6048,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.3.10",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "83e8d98b9915de76c659ce27d683c02a0f99fa90"
+                "reference": "b03f285a333f51e58c95cce54109a4a9ed691436"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/83e8d98b9915de76c659ce27d683c02a0f99fa90",
-                "reference": "83e8d98b9915de76c659ce27d683c02a0f99fa90",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/b03f285a333f51e58c95cce54109a4a9ed691436",
+                "reference": "b03f285a333f51e58c95cce54109a4a9ed691436",
                 "shasum": ""
             },
             "require": {
@@ -6559,17 +6065,19 @@
                 "psr/http-message": "~1.0"
             },
             "provide": {
-                "psr/http-message-implementation": "~1.0.0"
+                "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
                 "phpunit/phpunit": "^4.6 || ^5.5",
                 "zendframework/zend-coding-standard": "~1.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev",
-                    "dev-develop": "1.4-dev"
+                    "dev-master": "1.4-dev",
+                    "dev-develop": "1.5-dev"
                 }
             },
             "autoload": {
@@ -6588,7 +6096,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2017-01-23T04:53:24+00:00"
+            "time": "2017-04-06T16:18:34+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -6636,32 +6144,32 @@
         },
         {
             "name": "zendframework/zend-feed",
-            "version": "2.7.0",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-feed.git",
-                "reference": "12b328d382aa5200f1de53d4147033b885776b67"
+                "reference": "94579e805dd108683209fe14b3b5d4276de3de6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-feed/zipball/12b328d382aa5200f1de53d4147033b885776b67",
-                "reference": "12b328d382aa5200f1de53d4147033b885776b67",
+                "url": "https://api.github.com/repos/zendframework/zend-feed/zipball/94579e805dd108683209fe14b3b5d4276de3de6e",
+                "reference": "94579e805dd108683209fe14b3b5d4276de3de6e",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || ^7.0",
+                "php": "^5.6 || ^7.0",
                 "zendframework/zend-escaper": "^2.5",
-                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+                "zendframework/zend-stdlib": "^2.7 || ^3.1"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
+                "phpunit/phpunit": "^6.0.8 || ^5.7.15",
                 "psr/http-message": "^1.0",
-                "zendframework/zend-cache": "^2.5",
-                "zendframework/zend-db": "^2.5",
-                "zendframework/zend-http": "^2.5",
+                "zendframework/zend-cache": "^2.6",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-db": "^2.7",
+                "zendframework/zend-http": "^2.5.4",
                 "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-                "zendframework/zend-validator": "^2.5"
+                "zendframework/zend-validator": "^2.6"
             },
             "suggest": {
                 "psr/http-message": "PSR-7 ^1.0, if you wish to use Zend\\Feed\\Reader\\Http\\Psr7ResponseDecorator",
@@ -6674,8 +6182,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev",
-                    "dev-develop": "2.8-dev"
+                    "dev-master": "2.8-dev",
+                    "dev-develop": "2.9-dev"
                 }
             },
             "autoload": {
@@ -6693,7 +6201,7 @@
                 "feed",
                 "zf2"
             ],
-            "time": "2016-02-11T18:54:29+00:00"
+            "time": "2017-04-01T15:03:14+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -6795,6 +6303,511 @@
                 "instantiate"
             ],
             "time": "2015-06-14T21:17:01+00:00"
+        },
+        {
+            "name": "drupal/commerce_demo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mglaman/commerce_demo.git",
+                "reference": "0ef93c49ef1f24fd9f3e1cf253e11af20c1eb48f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mglaman/commerce_demo/zipball/0ef93c49ef1f24fd9f3e1cf253e11af20c1eb48f",
+                "reference": "0ef93c49ef1f24fd9f3e1cf253e11af20c1eb48f",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/commerce": "2.x-dev",
+                "drupal/commerce_migrate": "2.x-dev",
+                "drupal/commerce_shipping": "2.x-dev",
+                "drupal/migrate_plus": "~3",
+                "drupal/migrate_source_csv": "~2",
+                "drupal/migrate_tools": "~3"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Commerce demo stuff",
+            "homepage": "https://www.drupal.org/project/commerce_demo",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "issues": "http://drupal.org/project/issues/commerce_demo",
+                "source": "http://cgit.drupalcode.org/commerce_demo"
+            },
+            "time": "2017-03-13 18:04:33"
+        },
+        {
+            "name": "drupal/commerce_migrate",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/commerce_migrate",
+                "reference": "fc38b0fe05cb0e6c8bb088a0d67271105133eb2c"
+            },
+            "require": {
+                "drupal/commerce": "~2.0",
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-alpha1+0-dev",
+                    "datestamp": "1475809439"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Haza",
+                    "homepage": "https://www.drupal.org/user/182721"
+                },
+                {
+                    "name": "andyg5000",
+                    "homepage": "https://www.drupal.org/user/808668"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "dwkitchen",
+                    "homepage": "https://www.drupal.org/user/367701"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rfay",
+                    "homepage": "https://www.drupal.org/user/30906"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Commerce Migrate extends Migrate to support bringing store information into Drupal Commerce.",
+            "homepage": "http://drupal.org/project/commerce_migrate",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce_migrate"
+            },
+            "time": "2016-10-07 02:51:03"
+        },
+        {
+            "name": "drupal/commerce_order",
+            "version": "dev-2.x",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_price": "*",
+                "drupal/commerce_store": "*",
+                "drupal/core": "*",
+                "drupal/entity_reference_revisions": "*",
+                "drupal/profile": "*",
+                "drupal/state_machine": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-beta5+57-dev",
+                    "datestamp": "1488453185"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Damien Tournoud",
+                    "homepage": "https://www.drupal.org/user/22211"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Defines the Order entity and associated features.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_price",
+            "version": "dev-2.x",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/core": "~8.0"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-beta5+57-dev",
+                    "datestamp": "1488453185"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Damien Tournoud",
+                    "homepage": "https://www.drupal.org/user/22211"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Defines the Currency entity.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_shipping",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/commerce_shipping",
+                "reference": "18cfd587b2d8266b569eacba85268351856c9a38"
+            },
+            "require": {
+                "drupal/commerce": "*",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_price": "*",
+                "drupal/core": "~8.0",
+                "drupal/physical": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-beta1+6-dev",
+                    "datestamp": "1488798784"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "googletorp",
+                    "homepage": "https://www.drupal.org/user/386230"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides core shipping functionality.",
+            "homepage": "https://www.drupal.org/project/commerce_shipping",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce_shipping"
+            },
+            "time": "2017-03-07 15:17:01"
+        },
+        {
+            "name": "drupal/commerce_store",
+            "version": "dev-2.x",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_price": "*",
+                "drupal/core": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-beta5+57-dev",
+                    "datestamp": "1488453185"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Damien Tournoud",
+                    "homepage": "https://www.drupal.org/user/22211"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Defines the Store entity and associated features.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce"
+            }
+        },
+        {
+            "name": "drupal/migrate_plus",
+            "version": "3.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_plus",
+                "reference": "8.x-3.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-3.0-beta1.zip",
+                "reference": "8.x-3.0-beta1",
+                "shasum": "7bae5c758a432053863b7b19c94fc1b829debf00"
+            },
+            "require": {
+                "drupal/core": "^8.2"
+            },
+            "require-dev": {
+                "drupal/migrate_example_advanced_setup": "*",
+                "drupal/migrate_example_setup": "*"
+            },
+            "suggest": {
+                "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-beta1",
+                    "datestamp": "1476307739"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Ryan",
+                    "homepage": "https://www.drupal.org/u/mikeryan",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Enhancements to core migration support.",
+            "homepage": "https://www.drupal.org/project/migrate_plus",
+            "support": {
+                "source": "https://cgit.drupalcode.org/migrate_plus",
+                "issues": "https://www.drupal.org/project/issues/migrate_plus",
+                "irc": "irc://irc.freenode.org/drupal-migrate"
+            }
+        },
+        {
+            "name": "drupal/migrate_source_csv",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_source_csv",
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_source_csv-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "056845ce1679a051733b12576e3204609dce293d"
+            },
+            "require": {
+                "drupal/core": "~8.1"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1",
+                "phpunit/phpunit": "~4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1479750843"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Lucas Hedding",
+                    "homepage": "https://www.drupal.org/u/heddn",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "CSV source migration.",
+            "homepage": "https://www.drupal.org/project/migrate_source_csv",
+            "support": {
+                "source": "https://cgit.drupalcode.org/migrate_source_csv",
+                "issues": "https://www.drupal.org/project/issues/migrate_source_csv",
+                "irc": "irc://irc.freenode.org/drupal-migrate"
+            }
+        },
+        {
+            "name": "drupal/migrate_tools",
+            "version": "3.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_tools",
+                "reference": "8.x-3.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-3.0-beta1.zip",
+                "reference": "8.x-3.0-beta1",
+                "shasum": "1511d1da1444743fa2defa54a17e62264e8ab836"
+            },
+            "require": {
+                "drupal/core": "^8.2",
+                "drupal/migrate_plus": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-beta1",
+                    "datestamp": "1476313439"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
+                }
+            ],
+            "description": "Tools to assist in developing and running migrations.",
+            "homepage": "https://www.drupal.org/project/migrate_tools",
+            "support": {
+                "source": "http://cgit.drupalcode.org/migrate_tools"
+            }
+        },
+        {
+            "name": "drupal/physical",
+            "version": "1.0.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/physical",
+                "reference": "8.x-1.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/physical-8.x-1.0-rc2.zip",
+                "reference": "8.x-1.0-rc2",
+                "shasum": "591a939febfa578c49c1adf937a1e51c819555b2"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-rc2",
+                    "datestamp": "1483664643"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "czigor",
+                    "homepage": "https://www.drupal.org/user/826222"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Physical supplies such fields as physical weight and dimensions.",
+            "homepage": "http://drupal.org/project/physical",
+            "support": {
+                "source": "http://cgit.drupalcode.org/physical"
+            }
         },
         {
             "name": "jcalderonzumba/gastonjs",
@@ -7775,7 +7788,6 @@
         "drupal/commerce": 20,
         "drupal/swiftmailer": 20,
         "drupalcommerce/commerce_base": 20,
-        "drupal/commerce_demo": 20,
         "drupal/commerce_behat": 20
     },
     "prefer-stable": true,
