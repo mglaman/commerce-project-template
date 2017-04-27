@@ -2,6 +2,8 @@ vagrant_hostname: local.example.com
 vagrant_machine_name: local-example
 vagrant_ip: 192.168.88.22
 
+drupal_domain: "local.example.com"
+
 vagrant_synced_folders:
   - local_path: .
     destination: /var/www/drupal
@@ -32,4 +34,3 @@ firewall_log_dropped_packets: false
 apache_listen_port: "80"
 varnish_listen_port: "81"
 varnish_default_backend_port: "80"
-
