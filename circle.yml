@@ -38,8 +38,14 @@ general:
   artifacts:
     - "tests/failures"
 
-#deployment:
-#  production:
-#    branch: master
-#    commands:
-#      - Do something
+# deployment:
+#   prod:
+#     branch: master
+#     commands:
+#     - DRUPALVM_ENV=prod ansible-playbook \
+#       -i vm/inventory \
+#       vendor/geerlingguy/drupal-vm/provisioning/playbook.yml \
+#       -e "config_dir=$(pwd)/vm" \
+#       --sudo
+#       --tags=drupal
+#       --extra-vars "ansible_become_pass=${ANSIBLE_VAULT_PASSWORD}"

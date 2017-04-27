@@ -36,8 +36,8 @@
         "drupal-composer/drupal-scaffold": "^2.2",
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "~8.3.0",
-        "drupal/console": "~1.0",
-        "drush/drush": "~8.0",
+        "drupal/console": "^1.0",
+        "drush/drush": "^8.1",
         "drupal/commerce": "2.x-dev",
         "drupal/swiftmailer": "1.x-dev",
         "drupalcommerce/commerce_base": "dev-8.x-1.x"
