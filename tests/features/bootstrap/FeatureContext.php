@@ -21,4 +21,21 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
   public function __construct() {
   }
 
+  /**
+   * Click some text
+   *
+   * @When /^I click on the text "([^"]*)"$/
+   */
+  public function iClickOnTheText($selector) {
+    $session = $this->getSession();
+    $element = $session->getPage()->find(
+      'xpath',
+      $session->getSelectorsHandler()->selectorToXpath('xpath', $selector)
+    );
+    if (null === $element) {
+      throw new \InvalidArgumentException(sprintf('Cannot find: "%s"', $selector));
+    }
+
+    $element->click();
+  }
 }
