@@ -12,7 +12,7 @@ Feature: View a product
   @javascript
   Scenario: Changing product attributes in the cart
     Given I am on "/product/1"
-    When I click on the text "//label[@class='option']//span[text()='Yellow']"
+    When I click on the text "//label[.//span[text()='Yellow']]"
       And I wait for AJAX to finish
     Then I should see "Commerce Guys Hoodie - Yellow, Small"
       And I should see "15080-009-SY"
@@ -20,7 +20,7 @@ Feature: View a product
       And I wait for AJAX to finish
     Then I should see "Commerce Guys Hoodie - Yellow, Large"
       And I should see "15080-009-LY"
-    When I click on the text "//label[@class='option']//span[text()='Cyan']"
+    When I click on the text "//label[.//span[text()='Cyan']]"
       And I wait for AJAX to finish
     Then I should see "Commerce Guys Hoodie - Cyan, Large"
       And I should see "15080-009-LC"
