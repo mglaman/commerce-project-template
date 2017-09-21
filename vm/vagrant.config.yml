@@ -1,8 +1,8 @@
-vagrant_hostname: local.example.com
-vagrant_machine_name: local-example
+vagrant_hostname: commerce2.dev
+vagrant_machine_name: commerce2dev
 vagrant_ip: 192.168.88.22
 
-drupal_domain: "local.example.com"
+drupal_domain: "local.{{ drupal_domain }}"
 
 vagrant_synced_folders:
   - local_path: .

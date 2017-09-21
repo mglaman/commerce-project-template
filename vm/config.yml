@@ -9,7 +9,6 @@ drupal_core_path: "/var/www/drupal/web"
 drupal_install_site: true
 
 drupal_domain: "example.com"
-vagrant_hostname: "{{ drupal_domain }}"
 
 drupalvm_cron_jobs:
   - name: "Drupal cron"
