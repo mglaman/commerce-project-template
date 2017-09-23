@@ -1,4 +1,8 @@
 ---
+extra_packages:
+  - sqlite
+  - php-bcmath
+
 # Composer project settings.
 drupal_build_composer_project: false
 drupal_build_composer: false
