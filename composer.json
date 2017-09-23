@@ -40,7 +40,8 @@
         "drush/drush": "^8.1",
         "drupal/commerce": "^2",
         "drupal/swiftmailer": "^1",
-        "drupalcommerce/commerce_base": "dev-8.x-1.x"
+        "drupalcommerce/commerce_base": "dev-8.x-1.x",
+        "drupal/admin_toolbar": "^1.20"
     },
     "require-dev": {
         "behat/mink": "~1.7",
